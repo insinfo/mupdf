@@ -1,0 +1,56 @@
+LIBRARY libmupdf
+EXPORTS
+    ; Context Management
+    fz_new_context = fz_new_context_imp
+    fz_clone_context
+    fz_drop_context
+    fz_set_user_context
+    fz_user_context
+
+    ; Document Handlers
+    fz_register_document_handlers
+
+    ; Document Loading
+    fz_open_document
+    fz_open_document_with_stream
+    fz_recognize_document
+    fz_drop_document
+
+    ; Document Properties
+    fz_needs_password
+    fz_authenticate_password
+    fz_lookup_metadata
+
+    ; Page Tree
+    fz_count_pages
+    fz_load_page
+    fz_drop_page
+    fz_bound_page
+
+    ; Pixmap Rendering
+    fz_new_pixmap
+    fz_drop_pixmap
+    fz_clear_pixmap
+    fz_clear_pixmap_with_value
+
+    ; Device and Drawing
+    fz_new_draw_device
+    fz_run_page_contents
+    fz_drop_device
+
+    ; Error Handling
+    fz_throw
+    fz_rethrow
+    fz_warn
+    fz_caught
+    fz_caught_message
+
+    ; Stream and Buffer I/O
+    fz_new_buffer
+    fz_drop_buffer
+    fz_open_file
+    fz_open_memory
+    fz_read
+    fz_seek
+    fz_tell
+    fz_drop_stream
