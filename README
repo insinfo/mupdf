@@ -1,3 +1,15 @@
+### compile on linux
+
+make shared -j$(nproc)
+
+### ou compilar com uma API limpa (exportação explícita):
+make shared-clean
+make shared HAVE_VISIBILITY_ATTRIBUTE=yes -j$(nproc)
+
+### mais limpo ainda
+
+make shared HAVE_VISIBILITY_ATTRIBUTE=yes LDFLAGS="-Wl,--version-script=libmupdf.version" -j$(nproc)
+
 ABOUT
 
 MuPDF is a lightweight open source software framework for viewing and converting
